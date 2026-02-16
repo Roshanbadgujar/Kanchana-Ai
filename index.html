@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanchana AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --nebula-bg: #0d0111;
+        --glass: rgba(20, 10, 30, 0.4);
+        --glass-border: rgba(139, 92, 246, 0.1);
+        --accent-purple: #8b5cf6;
+        --accent-gold: #fbbf24;
+      }
+
+      body {
+        background-color: var(--nebula-bg);
+        background-image: 
+          radial-gradient(circle at 20% 30%, rgba(88, 28, 135, 0.2) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(46, 16, 101, 0.2) 0%, transparent 50%),
+          url('https://www.transparenttextures.com/patterns/stardust.png');
+        color: #f3f4f6;
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .font-cinzel { font-family: 'Cinzel', serif; }
+      .font-playfair { font-family: 'Playfair Display', serif; }
+      
+      .glass-panel {
+        background: var(--glass);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+      }
+
+      .premium-gold-text {
+        background: linear-gradient(to right, #fbbf24, #f59e0b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .premium-gold-btn {
+        background: linear-gradient(135deg, #78350f 0%, #451a03 100%);
+        border: 1px solid rgba(251, 191, 36, 0.3);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      }
+
+      .premium-gold-btn:hover {
+        border-color: rgba(251, 191, 36, 0.6);
+        box-shadow: 0 4px 20px rgba(251, 191, 36, 0.2);
+      }
+
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in { animation: fade-in 0.8s ease-out forwards; }
+
+      @keyframes glow-pulse {
+        0%, 100% { opacity: 0.5; box-shadow: 0 0 10px rgba(139, 92, 246, 0.3); }
+        50% { opacity: 1; box-shadow: 0 0 25px rgba(139, 92, 246, 0.6); }
+      }
+      .animate-glow { animation: glow-pulse 3s infinite; }
+
+      .glow-purple { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4); }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 5px; }
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-thumb { background: rgba(139, 92, 246, 0.2); border-radius: 10px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(139, 92, 246, 0.4); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
